@@ -1,7 +1,8 @@
-package campsite;
+//JUnit tests NOT COMPLETED
+//JavaFX GUI NOT COMPLETED
+//View Pending Bookings NOT COMPLETED
 
-//Implement suitable JavaFX graphical user interface to interact with your system.
-//You should implement a set of JUnit classes to test code
+package campsite;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeParseException;
