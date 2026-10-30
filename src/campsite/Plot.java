@@ -86,7 +86,7 @@ public class Plot {
         }
 
         if (!isValidStaticDwelling(staticDwelling)) {
-            throw new IllegalArgumentException("Static dwelling must be MobileHome, " + "Bungalow, Apartment or None.");
+            throw new IllegalArgumentException("Static dwelling must be MobileHome, Bungalow, Apartment or None.");
         }
         this.staticDwelling = staticDwelling.trim();
     }
@@ -114,7 +114,7 @@ public class Plot {
         }
 
         if (!isValidDwelling(dwelling)) {
-            throw new IllegalArgumentException("Dwelling must be EmptyPitch, Tent, Caravan, " + "Campervan, Motorhome or None.");
+            throw new IllegalArgumentException("Dwelling must be EmptyPitch, Tent, Caravan, Campervan, Motorhome or None.");
         }
         this.dwelling = dwelling.trim();
     }
