@@ -1,4 +1,3 @@
-//JUnit tests NOT COMPLETED
 //JavaFX GUI NOT COMPLETED
 //View Pending Bookings NOT COMPLETED
 
