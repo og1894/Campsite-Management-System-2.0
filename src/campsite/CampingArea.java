@@ -237,17 +237,6 @@ public class CampingArea {
         return null;
     }
 
-    public Plot findPlotForBooking(int bookingID) {
-        for (int i = 0; i < plots.size(); i++) {
-            Plot plot = plots.get(i);
-
-            if (plot.findBooking(bookingID) != null) {
-                return plot;
-            }
-        }
-        return null;
-    }
-
     // --------------------------------------------------
     // Booking cancellation
     // --------------------------------------------------

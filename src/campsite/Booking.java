@@ -141,23 +141,6 @@ public class Booking {
         this.endDate = endDate;
     }
 
-    public void changeDates(LocalDate newStartDate, LocalDate newEndDate) {
-        if (!isPending()) {
-            throw new IllegalStateException("Only pending bookings can be changed.");
-        }
-
-        if (!assignedPlot.isAvailable(newStartDate, newEndDate)) {
-            throw new IllegalArgumentException("The plot is unavailable for the new dates.");
-        }
-
-        setDates(newStartDate, newEndDate);
-        totalCost = calculateTotalCost();
-
-        if (!isWithinBudget()) {
-            throw new IllegalArgumentException("The changed booking exceeds the budget.");
-        }
-    }
-
     // --------------------------------------------------
     // Preferred plot type
     // --------------------------------------------------
@@ -259,14 +242,6 @@ public class Booking {
 
     public boolean isPending() {
         return status == BookingStatus.PENDING;
-    }
-
-    public boolean isCompleted() {
-        return status == BookingStatus.COMPLETED;
-    }
-
-    public boolean isCancelled() {
-        return status == BookingStatus.CANCELLED;
     }
 
     public void cancelBooking() {

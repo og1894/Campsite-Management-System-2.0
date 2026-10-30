@@ -132,22 +132,6 @@ public class Campsite {
         return false;
     }
 
-    public boolean removeFacility(String facility) {
-        if (facility == null || facility.isBlank()) {
-            return false;
-        }
-
-        for (int i = 0; i < facilities.size(); i++) {
-            String currentFacility = facilities.get(i);
-
-            if (currentFacility.equalsIgnoreCase(facility.trim())) {
-                facilities.remove(i);
-                return true;
-            }
-        }
-        return false;
-    }
-
     public String getFacilitiesReport() {
         if (facilities.isEmpty()) {
             return "None";
@@ -206,48 +190,6 @@ public class Campsite {
             }
         }
         return null;
-    }
-
-    public boolean removeCampingArea(String campingAreaID) {
-        if (campingAreaID == null || campingAreaID.isBlank()) {
-            return false;
-        }
-
-        for (int i = 0; i < campingAreas.size(); i++) {
-            CampingArea area = campingAreas.get(i);
-
-            if (area.getCampingAreaID().equalsIgnoreCase(campingAreaID.trim())) {
-                if (area.getNumberOfPendingBookings() > 0) {
-                    return false;
-                }
-
-                campingAreas.remove(i);
-                return true;
-            }
-        }
-        return false;
-    }
-
-    // --------------------------------------------------
-    // Plot management
-    // --------------------------------------------------
-
-    public boolean addPlot(String campingAreaID, Plot plot) {
-        CampingArea area = findCampingArea(campingAreaID);
-
-        if (area == null) {
-            return false;
-        }
-        return area.addPlot(plot);
-    }
-
-    public Plot findPlot(String campingAreaID, String plotID) {
-        CampingArea area = findCampingArea(campingAreaID);
-
-        if (area == null) {
-            return null;
-        }
-        return area.findPlot(plotID);
     }
 
     // --------------------------------------------------

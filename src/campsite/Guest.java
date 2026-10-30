@@ -121,17 +121,6 @@ public class Guest {
         bookings.add(booking);
     }
 
-    public Booking findBooking(int bookingID) {
-        for (int i = 0; i < bookings.size(); i++) {
-            Booking booking = bookings.get(i);
-
-            if (booking.getBookingID() == bookingID) {
-                return booking;
-            }
-        }
-        return null;
-    }
-
     // --------------------------------------------------
     // Helper methods
     // --------------------------------------------------
