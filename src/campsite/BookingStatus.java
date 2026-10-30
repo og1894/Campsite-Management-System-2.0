@@ -10,14 +10,6 @@ public enum BookingStatus {
 
 /* BOOKING CLASS
 
-    public boolean isCompleted() {
-        return status == BookingStatus.COMPLETED;
-    }
-
-    public boolean isCancelled() {
-        return status == BookingStatus.CANCELLED;
-    }
-
     public void changeDates(LocalDate newStartDate, LocalDate newEndDate) {
         if (!isPending()) {
             throw new IllegalStateException("Only pending bookings can be changed.");
@@ -108,19 +100,5 @@ public enum BookingStatus {
             return null;
         }
         return area.findPlot(plotID);
-    }
- */
-
-/* GUEST CLASS
-
-    public Booking findBooking(int bookingID) {
-        for (int i = 0; i < bookings.size(); i++) {
-            Booking booking = bookings.get(i);
-
-            if (booking.getBookingID() == bookingID) {
-                return booking;
-            }
-        }
-        return null;
     }
  */

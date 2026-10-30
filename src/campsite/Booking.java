@@ -244,6 +244,14 @@ public class Booking {
         return status == BookingStatus.PENDING;
     }
 
+    public boolean isCompleted() {
+        return status == BookingStatus.COMPLETED;
+    }
+
+    public boolean isCancelled() {
+        return status == BookingStatus.CANCELLED;
+    }
+
     public void cancelBooking() {
         if (!isPending()) {
             throw new IllegalStateException("Only pending bookings can be cancelled.");
