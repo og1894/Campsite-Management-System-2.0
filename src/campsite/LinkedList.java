@@ -3,8 +3,6 @@ package campsite;
 import java.util.NoSuchElementException;
 import java.util.Objects;
 
-// ? question mark is simple if-else statement
-
 public class LinkedList<T> {
 
     private static class Node<T> {
