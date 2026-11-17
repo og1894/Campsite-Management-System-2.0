@@ -22,7 +22,7 @@ public class AppDriver {
         persistence = new XStreamPersistence();
     }
 
-    public static void main(String[] args) {
+    static void main(String[] args) {
         AppDriver driver = new AppDriver();
         driver.run();
     }
